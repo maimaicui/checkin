@@ -18,8 +18,7 @@ const glados = async () => {
     }).then((r) => r.json())
     return [
       'Checkin OK',
-      `${checkin.message}`,
-      `Left Days ${Number(status.data.leftDays)}`,
+     
     ]
   } catch (error) {
     return [
