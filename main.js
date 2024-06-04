@@ -19,7 +19,7 @@ const glados = async () => {
     return [
       'Checkin OK',
       `${checkin.message}`,
-       `${checkin}`
+       `${checkin}`,
     ]
   } catch (error) {
     return [
