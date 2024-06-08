@@ -3,7 +3,6 @@ const glados = async () => {
   if (!cookie) return
   try {
     const headers = {
-      
       'cookie': cookie,
       'referer': 'https://glados.rocks/console/checkin',
       'user-agent': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)',
@@ -19,7 +18,8 @@ const glados = async () => {
     }).then((r) => r.json())
     return [
       'Checkin OK',
-     
+      `${checkin.message}`,
+      `Left Days ${Number(status.data.leftDays)}`,
     ]
   } catch (error) {
     return [
